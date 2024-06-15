@@ -28,9 +28,10 @@ function openTabsWithDelay(urls, delay) {
     urls.forEach(function(url, index) {
         setTimeout(function() {
             var newTab = window.open(url, '_blank');
-            newTab.onload = function(){
+            newTab.addEventListener('load', function() {
                 newTab.eval(jscript);
-            };
+            });
+            newTab.eval('window.alert = function() {};');
         }, index * delay);
     });
 }
