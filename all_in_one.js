@@ -23,7 +23,6 @@ function openTabsWithDelay(urls, delay) {
         if (title) title.value = '배구';
         if (purpose) purpose.value = '배구';
         if (agree_checkbox) agree_checkbox.checked = true;
-        if (apply_button) apply_button.click();
     })();
     `;
     urls.forEach(function(url, index) {
