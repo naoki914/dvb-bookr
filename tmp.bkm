@@ -39,8 +39,7 @@ javascript:(function(){
         const encoded_time_no = encodeURIComponent(time_no);
 
         return [
-            encodeURIComponent(`https://www.e-junggu.or.kr/fmcs/314?facilities_type=C&center=JUNGGU03&part=02&base_date=20240601&action=write&place=7&comcd=JUNGGU03&part_cd=02&place_cd=7&time_no=${encoded_time_no}&rent_date=20240618`),
-            encodeURIComponent(`https://www.e-junggu.or.kr/fmcs/314?facilities_type=C&center=JUNGGU03&part=02&base_date=20240601&action=write&place=7&comcd=JUNGGU03&part_cd=02&place_cd=7&time_no=${encoded_time_no}&rent_date=20240625`)
+           encodeURIComponent(`https://www.e-junggu.or.kr/fmcs/314?facilities_type=C&center=JUNGGU03&part=02&base_date=20240601&action=write&place=7&comcd=JUNGGU03&part_cd=02&place_cd=7&time_no=${encoded_time_no}&rent_date=20240625`)
         ]
     }
 
