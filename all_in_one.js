@@ -1,5 +1,4 @@
 function openTabsWithDelay(urls, delay) {
-
     jscript = `
     (function () {
         var member = document.querySelector('#mem_nm');
@@ -23,15 +22,15 @@ function openTabsWithDelay(urls, delay) {
         if (title) title.value = '배구';
         if (purpose) purpose.value = '배구';
         if (agree_checkbox) agree_checkbox.checked = true;
-    })();
-    `;
+    })();`;
     urls.forEach(function(url, index) {
+        console.log(url);
         setTimeout(function() {
             var newTab = window.open(url, '_blank');
+            newTab.eval('window.alert = function() {};');
             newTab.addEventListener('load', function() {
                 newTab.eval(jscript);
             });
-            newTab.eval('window.alert = function() {};');
         }, index * delay);
     });
 }
@@ -73,4 +72,4 @@ function getUrls() {
     return urls;
 }
 
-openTabsWithDelay(getUrls(), 2000);
+openTabsWithDelay(getUrls(), 50);
